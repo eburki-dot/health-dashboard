@@ -1,0 +1,44 @@
+name: Sync Garmin data
+
+on:
+  schedule:
+    # 7:00 AM ET = 12:00 UTC (EST) or 11:00 UTC (EDT)
+    # Using 12:00 UTC to cover EST; during EDT it'll run at 8am — acceptable
+    - cron: '0 12 * * *'
+
+  # Lets you hit "Run workflow" in the Actions tab anytime
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # needed to push health.json back to repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install garminconnect
+
+      - name: Run Garmin sync
+        env:
+          GARMIN_EMAIL:    ${{ secrets.GARMIN_EMAIL }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+        run: python sync_garmin.py
+
+      - name: Commit updated health.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/health.json
+          # Only commit if there are actual changes
+          git diff --cached --quiet || git commit -m "chore: garmin sync $(date -u +%Y-%m-%dT%H:%M)Z"
+          git push
