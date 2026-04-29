@@ -1,6 +1,6 @@
 {
-  "date": null,
-  "synced_at": null,
+  "date": "2026-04-29",
+  "synced_at": "2026-04-29T14:37:46.938300Z",
   "body_battery": null,
   "body_battery_drained": null,
   "hrv_overnight_avg": null,
@@ -9,20 +9,42 @@
   "hrv_weekly_avg": null,
   "hrv_status": null,
   "rhr": null,
-  "stress_avg": null,
+  "stress_avg": -1,
+  "stress_rest": null,
+  "stress_low": null,
+  "stress_med": null,
+  "stress_high": null,
   "steps": null,
   "steps_goal": null,
-  "spo2_avg": null,
-  "respiration_avg": null,
-  "hrv_7day_trend": [],
-  "sleep_source": null,
-  "sleep_total_min": null,
-  "sleep_deep_min": null,
-  "sleep_rem_min": null,
-  "sleep_light_min": null,
-  "sleep_score": null,
-  "sleep_bedtime": null,
-  "sleep_wake_time": null,
-  "sleep_awakenings": null,
-  "sleep_notes": null
+  "hrv_7day_trend": [
+    {
+      "date": "2026-04-23",
+      "hrv": null
+    },
+    {
+      "date": "2026-04-24",
+      "hrv": null
+    },
+    {
+      "date": "2026-04-25",
+      "hrv": null
+    },
+    {
+      "date": "2026-04-26",
+      "hrv": null
+    },
+    {
+      "date": "2026-04-27",
+      "hrv": null
+    },
+    {
+      "date": "2026-04-28",
+      "hrv": null
+    },
+    {
+      "date": "2026-04-29",
+      "hrv": null
+    }
+  ],
+  "nutrition": {}
 }
