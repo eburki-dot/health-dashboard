@@ -1,15 +1,15 @@
 {
-  "date": "2026-05-01",
-  "synced_at": "2026-05-01T13:18:19.981713Z",
-  "body_battery": null,
-  "body_battery_drained": null,
+  "date": "2026-05-02",
+  "synced_at": "2026-05-02T13:11:13.920431Z",
+  "body_battery": 35,
+  "body_battery_drained": 0,
   "hrv_overnight_avg": null,
   "hrv_5min_high": null,
   "hrv_5min_low": null,
   "hrv_weekly_avg": null,
-  "hrv_status": null,
+  "hrv_status": "NONE",
   "rhr": null,
-  "stress_avg": -1,
+  "stress_avg": 25,
   "stress_rest": null,
   "stress_low": null,
   "stress_med": null,
@@ -17,10 +17,6 @@
   "steps": null,
   "steps_goal": null,
   "hrv_7day_trend": [
-    {
-      "date": "2026-04-25",
-      "hrv": null
-    },
     {
       "date": "2026-04-26",
       "hrv": null
@@ -43,6 +39,10 @@
     },
     {
       "date": "2026-05-01",
+      "hrv": null
+    },
+    {
+      "date": "2026-05-02",
       "hrv": null
     }
   ],
