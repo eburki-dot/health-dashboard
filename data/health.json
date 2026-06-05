@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-04",
-  "synced_at": "2026-06-04T15:14:08.511746Z",
+  "date": "2026-06-05",
+  "synced_at": "2026-06-05T14:50:12.578786Z",
   "body_battery": null,
   "body_battery_drained": null,
   "hrv_overnight_avg": null,
@@ -17,10 +17,6 @@
   "steps": null,
   "steps_goal": null,
   "hrv_7day_trend": [
-    {
-      "date": "2026-05-29",
-      "hrv": null
-    },
     {
       "date": "2026-05-30",
       "hrv": null
@@ -43,6 +39,10 @@
     },
     {
       "date": "2026-06-04",
+      "hrv": null
+    },
+    {
+      "date": "2026-06-05",
       "hrv": null
     }
   ],
